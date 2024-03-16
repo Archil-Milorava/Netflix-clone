@@ -11,11 +11,6 @@ import { MovieService } from './shared/services/movie.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-<<<<<<< HEAD
-export class AppComponent {
-  title = 'netflix-clone';
-
-=======
 
 
 
@@ -31,5 +26,4 @@ ngOnInit(): void {
     
   })
 }
->>>>>>> working-branch
 }
