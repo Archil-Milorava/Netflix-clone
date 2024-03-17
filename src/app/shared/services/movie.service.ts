@@ -2,11 +2,10 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MovieService {
-
-  constructor(private http: HttpClient) {} 
+  constructor(private http: HttpClient) {}
 
   getMovies() {
     const options = {
@@ -17,12 +16,15 @@ export class MovieService {
         .set('page', '1')
         .set('sort_by', 'popularity.desc'),
       headers: new HttpHeaders({
-        'accept': 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMTVhZDZjMmM2YmFkNTFlZDlhMDBkYzg2ZTk1MjZlNiIsInN1YiI6IjY1ZjVjYzMxZDRhNjhiMDE0YzI4YzAzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yrueTvbpyppGqt5iCRnt_U1F1elw7qpJzveLlpgIawc'
-      })
+        accept: 'application/json',
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMTVhZDZjMmM2YmFkNTFlZDlhMDBkYzg2ZTk1MjZlNiIsInN1YiI6IjY1ZjVjYzMxZDRhNjhiMDE0YzI4YzAzMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yrueTvbpyppGqt5iCRnt_U1F1elw7qpJzveLlpgIawc',
+      }),
     };
 
-    return this.http.get<any>('https://api.themoviedb.org/3/discover/movie', options);
+    return this.http.get<any>(
+      'https://api.themoviedb.org/3/discover/movie',
+      options
+    );
   }
-
 }
