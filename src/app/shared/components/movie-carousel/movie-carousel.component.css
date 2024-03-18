@@ -64,6 +64,9 @@
     }
   }
 
-  .swiper-wrapper{
+  /* .swiper-wrapper{
     display: flex;
-  }
+    width: auto;
+    background-color: red;
+    justify-content: space-around;
+  } */

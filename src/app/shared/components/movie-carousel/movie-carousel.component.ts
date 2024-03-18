@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, ViewChild, viewChild } from '@angular/core';
 import Swiper from 'swiper';
 import { IVideoContent } from '../../models/video-content.interface';
+import { DesctiptionPipe } from '../../pipes/desctiption.pipe';
+import { ImagePipe } from '../../pipes/image.pipe';
 
 @Component({
   selector: 'app-movie-carousel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DesctiptionPipe, ImagePipe],
   templateUrl: './movie-carousel.component.html',
   styleUrl: './movie-carousel.component.css'
 })
